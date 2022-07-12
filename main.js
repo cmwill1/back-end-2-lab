@@ -58,4 +58,4 @@ function displayHouses(arr) {
 
 form.addEventListener('submit', submitHandler)
 
-getAllHouses()
+getHouses()
