@@ -6,7 +6,7 @@ const baseURL = `http://localhost:4004/api/houses`
 const housesCallback = ({ data: houses }) => displayHouses(houses)
 const errCallback = err => console.log(err)
 
-const getAllHouses = () => axios.get(baseURL).then(housesCallback).catch(errCallback)
+const getHouses = () => axios.get(baseURL).then(housesCallback).catch(errCallback)
 const createHouse = body => axios.post(baseURL, body).then(housesCallback).catch(errCallback)
 const deleteHouse = id => axios.delete(`${baseURL}/${id}`).then(housesCallback).catch(errCallback)
 const updateHouse = (id, type) => axios.put(`${baseURL}/${id}`, {type}).then(housesCallback).catch(errCallback)
